@@ -1,0 +1,7 @@
+dataset_root: data/raw/chest_xray
+train_manifest: data/splits/v2/train.csv
+val_manifest: data/splits/v2/val.csv
+test_manifest: data/splits/v2/test.csv
+image_size: [224, 224]
+positive_class: PNEUMONIA
+random_seed: 42

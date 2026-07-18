@@ -1,0 +1,30 @@
+experiment_name: efficientnetb0_class_weight_v1
+model_name: efficientnetb0
+data_config: configs/data_v3_clean.yaml
+seed: 42
+image_size: [224, 224]
+batch_size: 16
+dropout_rate: 0.4
+head_learning_rate: 0.001
+fine_tune_learning_rate: 0.00001
+head_max_epochs: 8
+fine_tune_max_epochs: 20
+head_early_stopping_patience: 3
+fine_tune_early_stopping_patience: 5
+reduce_lr_patience: 2
+reduce_lr_factor: 0.5
+minimum_learning_rate: 0.000001
+threshold: 0.5
+loss: binary_crossentropy
+class_weight:
+  0: 1.770621
+  1: 0.696754
+mixed_precision: false
+weights: imagenet
+fine_tune_last_non_bn_layers: 20
+keep_batch_norm_frozen: true
+backbone_training_mode: false
+preprocessing: built_in
+data_num_parallel_calls: 1
+augmentation_num_parallel_calls: 1
+data_prefetch: false

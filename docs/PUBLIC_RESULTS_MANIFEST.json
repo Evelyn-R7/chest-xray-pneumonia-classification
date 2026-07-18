@@ -1,0 +1,1028 @@
+[
+  {
+    "relative_path": ".gitignore",
+    "sha256": "374163b4c133e689d4cc3ed8ce4087df09148dc7aa0883b25fb481e732bf572f",
+    "size_bytes": 252,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "CITATION.cff",
+    "sha256": "ffb310af530ba8028f80192bd185517e4699c1f8a3ef206b6d771b00db407de8",
+    "size_bytes": 388,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "LICENSE",
+    "sha256": "af4a349568a9811d4943435ad5c5c795c57768d948846ec05818ab31bc388902",
+    "size_bytes": 1069,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "README.md",
+    "sha256": "f12d3c298834e359cb41fdf7d3635fd2aadad84825ee9b217877708f5d425bc7",
+    "size_bytes": 5303,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/data.yaml",
+    "sha256": "acc8dfe8cf4bfeaae81c07da6779dde747e1764a07d297747908ef691bc2c8a5",
+    "size_bytes": 216,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/data_v3_clean.yaml",
+    "sha256": "1630edc44c2072283509ac16e8c41a8b5c603a6a40911cafd35d7deae48473d7",
+    "size_bytes": 636,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/examples/cnn_baseline.example.yaml",
+    "sha256": "cf942e15e49fc5cdec5a8d0bae045d81016ff61ed9eccc22b09e51a0b43126c8",
+    "size_bytes": 158,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/examples/data.example.yaml",
+    "sha256": "667b9f8782028b6e366de1bac192389070cb210470186305c018d63f3f2f0cfd",
+    "size_bytes": 272,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/examples/efficientnetb0.example.yaml",
+    "sha256": "1386351f505035c2a2307512e1cea659b6065a81721bdb2ac322340bb36ac1fa",
+    "size_bytes": 259,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/experiments/cnn_baseline_v1.yaml",
+    "sha256": "4d7d5018eb00724386bf2da50a8cd8ccc08c69b85efce13840c3f16e725a901b",
+    "size_bytes": 378,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/experiments/efficientnetb0_class_weight_v1.yaml",
+    "sha256": "9b8aaf51a4dd506145f876d3800d332609631828db99e5aec8708bfe8c47a240",
+    "size_bytes": 751,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/experiments/efficientnetb0_focal_v1.yaml",
+    "sha256": "44378d5ea37648e05b22902753635c14be0342cce712313735d9b785c362641d",
+    "size_bytes": 844,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/experiments/efficientnetb0_transfer_v1.yaml",
+    "sha256": "2cd58ab13a3e92e7b427818a00b3ab421e591046e0ab11786c8474249dd8f322",
+    "size_bytes": 724,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "configs/experiments/vgg16_transfer_v1.yaml",
+    "sha256": "90445e49bdb42140a2feb627f26e811b5f4b0ed5ba8e24ccbbf6e45a70d637fb",
+    "size_bytes": 657,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/DATASET.md",
+    "sha256": "edf4473dd14e63d455f5b844c315d0ccbcae3d255f9d4bbd672f552590cd9e1c",
+    "size_bytes": 1460,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/ETHICS_AND_SAFETY.md",
+    "sha256": "e5364e9ed6367ed6e3558f025ae63ce3c5488b66365366b368ddde819190ede9",
+    "size_bytes": 773,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/EXPERIMENT_PROTOCOL.md",
+    "sha256": "4c7903188bd24eeb62057ba036bd441913a3b4c4ddcd4180889d3ab8f7c1160d",
+    "size_bytes": 990,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/LIMITATIONS.md",
+    "sha256": "095a675129a8c8475f32cdb98756a5d8d628b33347e89d555a46b40f5d648f5d",
+    "size_bytes": 700,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/MODEL_CARD.md",
+    "sha256": "6a4b28340250949f189f9b118ade778017fed9960073388d2f2f724582687cc3",
+    "size_bytes": 1854,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/REPRODUCIBILITY.md",
+    "sha256": "e075712059b80bce53f4b86685e30f7a322a214c920bcee49b534b7bdb49e4eb",
+    "size_bytes": 1022,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/RESULTS.md",
+    "sha256": "ed4ad13bc498903286065fb469aaf50d88a035799b97ac8bb7b73d540305dd45",
+    "size_bytes": 2429,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/class_distribution.png",
+    "sha256": "58fb482b0407f5562430deb8c73025989e8ddf0dec98a885739ba9ef8fa7e186",
+    "size_bytes": 68091,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/cnn_multiseed_metrics.png",
+    "sha256": "32d816a321cbea60fca71fc57c83f5d446567d5d58372472d71b4bfd62ae1b0b",
+    "size_bytes": 80352,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/final_test_calibration_curve.png",
+    "sha256": "80a4ff17e1165d877048183eb47eb0bc5f9abab047f607d8dde4749ee8512ec6",
+    "size_bytes": 61661,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/final_test_confusion_matrix.png",
+    "sha256": "84939639e5a44de6f60004d7c21a6a9fa658bdd13c53cf4553e87a44c487542e",
+    "size_bytes": 34671,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/final_test_pr_curve.png",
+    "sha256": "87ad21516828c969ebfcda315834bf15d27f2a17c4c4e4bb9c1d3b0622d2b001",
+    "size_bytes": 45009,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/final_test_roc_curve.png",
+    "sha256": "7fa1eaac0ad3f2e8d8943fff5fc55a199fa281ad58e1634ee446d15c71df6c5a",
+    "size_bytes": 46126,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/imbalance_strategy_comparison.png",
+    "sha256": "8793baa6c5b857a364e59f97fc94494dcb6057d6e4c74f838db3e7af273c9fe3",
+    "size_bytes": 54078,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/pipeline_overview.png",
+    "sha256": "9ce558139094b72dec78e3355f019211f1917f99cdfa435a701166e54b62adb7",
+    "size_bytes": 53698,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/selected_gradcam_examples.png",
+    "sha256": "d01694c281497ef07ef374edf8628ee8f912ed4b94393d82a1369f863b253d07",
+    "size_bytes": 518254,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "post-hoc",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "docs/assets/transfer_model_comparison.png",
+    "sha256": "d573d4479cdd0f369ce710a08539097518dff2211c03c5d683d43611948902ec",
+    "size_bytes": 60725,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": true,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/cnn_baseline_multiseed_results.md",
+    "sha256": "8ec4eb7c3e80386596d1becef6f6890fabe6c047e01fc4d729df5c6295174fc0",
+    "size_bytes": 2658,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/cnn_baseline_protocol.md",
+    "sha256": "b9ca40e32fbf34780257b77a048d6301dd9f196a376ccff8deb39a71eadfd155",
+    "size_bytes": 3563,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/cnn_baseline_results.md",
+    "sha256": "2becf1d7869d7e643e3d0b6d5d44be9831e58aa3368675a611f9ea58288814a9",
+    "size_bytes": 3597,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/data_audit.md",
+    "sha256": "f32e2939ae4b4ecf46c20df0e9fa9c655f7704d0d98d8e0b8760a36b74dc641a",
+    "size_bytes": 1416,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/data_pipeline_report.md",
+    "sha256": "e986fc30e61d915a896d9747c3049d49dd48c89298a22f0b8b36fe2dc37c0bd7",
+    "size_bytes": 4265,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/efficientnetb0_imbalance_results.md",
+    "sha256": "fca34bdd70a291fec6f7d4a36273682039664dee54bd5560256f744ae8884c24",
+    "size_bytes": 9710,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/efficientnetb0_multiseed_results.md",
+    "sha256": "a32c23dd14b406b54fd14a817c8c22c5afda204a2264eb89ec89994f7a202dfd",
+    "size_bytes": 4078,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/final_model_selection_protocol.md",
+    "sha256": "9404fa7dc37256c38354da5525b29ca338e2ec24c5adb05ce04b92717d1d3c8d",
+    "size_bytes": 3427,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/final_test_preflight.md",
+    "sha256": "24bc1f2f5af2b3c986ab6a407bfafa7144b332db98df89321f39216b2792b5ad",
+    "size_bytes": 217,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/final_test_protocol.md",
+    "sha256": "e51ee5398abf7e1d23a8689d277598fe7538bfe6ddf0172184cce8e53aa52c37",
+    "size_bytes": 2444,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/final_test_results.md",
+    "sha256": "9c2d25dcc634851d9454ee8e539c624ac916eaa53c3e8e3d357a70ae530b601e",
+    "size_bytes": 7120,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/posthoc_error_analysis.md",
+    "sha256": "9c934320cec65d8ded7c3145a7604589d94c3ddbe0dd88ea9104a54b3d6e1d36",
+    "size_bytes": 5478,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "post-hoc",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/public_release_validation.md",
+    "sha256": "3a2558a7e8d4dd78041d9c415bdfaf799f8105a93150785ae51562b881fc04f7",
+    "size_bytes": 2403,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/split_report.md",
+    "sha256": "706351435bbcd9f4baed07c2f709e240553908743e401e5093923d770a334cd3",
+    "size_bytes": 3984,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/split_report_v3_clean.md",
+    "sha256": "f36e5d1f784bfba10507047abf7c9d18cb3350303295eba392f0e699504d7296",
+    "size_bytes": 3972,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/transfer_learning_protocol.md",
+    "sha256": "3c765b1dfc99e78eb8e56a1ea95d3af58d31ca0be248e4133d621f4c3af062b5",
+    "size_bytes": 3277,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/transfer_learning_results.md",
+    "sha256": "bb235ce856c959434e6100625fc16dc604de5b6e1a40cf7a3a341fc5d12fffd8",
+    "size_bytes": 3076,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/wsl_gpu_environment.md",
+    "sha256": "afd5c3029da2a2e6782374fe9bb55368d94dedc25cf5c7fe019e68542ad854ce",
+    "size_bytes": 5418,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "reports/wsl_gpu_manual_instructions.md",
+    "sha256": "38473bf6a5c4affe5c7a50808cb7fb57acdef02eb4d565777647d1f515514e04",
+    "size_bytes": 3801,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "requirements.txt",
+    "sha256": "94e7bd7516e15cc67b9c905cbcfaaf76bf27bec99a27a8670330560b9f58a51c",
+    "size_bytes": 56,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/download_transfer_weights.sh",
+    "sha256": "7d376fc0b6ee6c3de6d34381a1df8f9ee3bbf05d835432d14348ac92496698d4",
+    "size_bytes": 1201,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/prepare_public_release.py",
+    "sha256": "9799be332223206280b4acc854934e4eb32b659eeb29442366abf164e20d641d",
+    "size_bytes": 25438,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_cnn_baseline_full.sh",
+    "sha256": "3c424c3849a14912c33653503a2c0647e4a0d63b1bfecbc493edfa4e9694f014",
+    "size_bytes": 1568,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_cnn_baseline_multiseed.sh",
+    "sha256": "49f46ac4589c32312c66c8a37ca4b82a46a41ac2a533ba95600b815332fafc5f",
+    "size_bytes": 4065,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_cnn_baseline_pilot.sh",
+    "sha256": "8f9729ac90cbfde13988f07fcef103c550bfa397544ad8f4ced25035c506a574",
+    "size_bytes": 1561,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_efficientnetb0_imbalance_multiseed.sh",
+    "sha256": "47c0f64e2944682aa5acb056dfdfc4b8e8b112e9484cea64861b97a1591c2ff0",
+    "size_bytes": 10345,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_efficientnetb0_transfer_full.sh",
+    "sha256": "f1bcb3244c3e9cec40293e57fa836e562ab75b55757c9bbde55dd91781e0c995",
+    "size_bytes": 257,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_efficientnetb0_transfer_multiseed.sh",
+    "sha256": "05bd760345d70349ee4c7386c647c8108ad3597ec3331b4ea23a9f4981f5bbc8",
+    "size_bytes": 8532,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_efficientnetb0_transfer_pilot.sh",
+    "sha256": "ee22cfb72940bec86f4789c22aa6e8940518b1016f89f6b2e96715c855814ef0",
+    "size_bytes": 258,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_final_protocol_selection.sh",
+    "sha256": "3f29b00c2c57c3f2e4ea98b5755aa6ef9ff2309e1db9b8a96e04edeb5de9e437",
+    "size_bytes": 2851,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_final_test_once.sh",
+    "sha256": "97753a58c1c520ea115b8a9868d7199ac17ef0ed9fe323e3d7b0d4aef5314d8d",
+    "size_bytes": 2672,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_final_test_preflight.sh",
+    "sha256": "50cc1e29763c452636fb40ff387db1af05d5730aaea36ff93fe63ac22edb65bf",
+    "size_bytes": 1624,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_vgg16_transfer_full.sh",
+    "sha256": "add3bea31911e51fd9497ce82140e099d3757aa16a4b1fa6a13011f95ab2814b",
+    "size_bytes": 248,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_vgg16_transfer_pilot.sh",
+    "sha256": "f4dc2eb4abe857ebfea58d0ddba7f2811870808a3c6cef53d94249166996f7f4",
+    "size_bytes": 249,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/run_wsl_regression.sh",
+    "sha256": "715bc5423d4ce90247744a454cafafd8306d26448cfefc8425b372383f1aa6a9",
+    "size_bytes": 3233,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/setup_wsl_gpu.sh",
+    "sha256": "c8defa4c2041387523cea5dccba89833a4085abcf0a6628f1e5395cd4926e815",
+    "size_bytes": 4307,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/transfer_run_common.sh",
+    "sha256": "fa4ded6db18bfef93553f9587e5448849cc04086f77b8cef5e2f1ae5c348b185",
+    "size_bytes": 3872,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/validate_public_release.sh",
+    "sha256": "57874922550e17acbb4604fdc01d7c81d102d8c502d1cfb9024606757930c635",
+    "size_bytes": 3430,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "scripts/verify_wsl_gpu.sh",
+    "sha256": "24e5e0bd2a8c86b199bebda8062243106b283e2d2537afb63110febe71b60a7d",
+    "size_bytes": 3005,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/aggregate_imbalance_strategies.py",
+    "sha256": "9aa9112cc226a9f16c69141622f485414c09eb85e3f46ae62b1cefa0f3682e5d",
+    "size_bytes": 13700,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/aggregate_multiseed.py",
+    "sha256": "fcd9884ea2d62150149f7e2a089cfa66d88083a25b77644cfff80ae6383a55cd",
+    "size_bytes": 14960,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/aggregate_transfer_multiseed.py",
+    "sha256": "ed7a0952efc88810d91eced01f06204a91bf1e01d77271f4cb0d722ed5d80522",
+    "size_bytes": 21077,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/audit_data.py",
+    "sha256": "33b95c7862e8b637bea1e4e24899d466baa7ce2d9f7f17ad602d941f5e29e46e",
+    "size_bytes": 691,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/build_final_protocol.py",
+    "sha256": "a6f524047c75858808de2bbfc5eb1193059cc2998f2e2eda3b1554cd5c9b9f29",
+    "size_bytes": 16726,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/check_data_pipeline.py",
+    "sha256": "6d3d93165bc094a4e04019de48e4c193ebeae436d6bbe201bcc6fb0629ee2c5a",
+    "size_bytes": 6357,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/create_splits.py",
+    "sha256": "7cc7b301d550b6f04154fb10575117009e5a022792d7cb33dcd12579d9e70351",
+    "size_bytes": 10200,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/create_splits_v3_clean.py",
+    "sha256": "6eb035eabeade9b6241176edbe7ccf02f0c859c49b220a1a8db0caf11bddd6f3",
+    "size_bytes": 8412,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/data_pipeline.py",
+    "sha256": "6e34476f85c4115fedfcc939c14bf6b3a46832ec404d54e71c3f82c76beb4cd7",
+    "size_bytes": 8904,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/evaluate_final_test_once.py",
+    "sha256": "5036b05e068382e71bf8e19271ee68af6e5292742cca52bea5adedc467e5cb46",
+    "size_bytes": 9981,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/evaluate_validation.py",
+    "sha256": "aa54fb6fb37ef57860451b24251c0cdfbc2a94924d2b9208c3294f6eb6e95854",
+    "size_bytes": 3971,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_protocol/__init__.py",
+    "sha256": "a7b0b521f0c2331ca46bbea6239e07b4ce50a00294a12af8eb63cc9b7d835e8c",
+    "size_bytes": 57,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_protocol/calibration.py",
+    "sha256": "ae738b60d2203f04bbfa94a94074f6d5482c24e07f7e23181e6f5e895b0294a4",
+    "size_bytes": 7642,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_protocol/protocol.py",
+    "sha256": "2f3298598ef72469e6c30102bf53943bc4016de81ce7b456228b52e419b841c8",
+    "size_bytes": 8135,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_protocol/thresholds.py",
+    "sha256": "13f4114910ba457347229c904bae980a3df9367e22d1fbf8e5ccc330e6539b59",
+    "size_bytes": 1808,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_test/__init__.py",
+    "sha256": "c25ef0bfd32cf00b2e5984536dc650910d0178ca9f1dd21dea3d20d4b647a2ee",
+    "size_bytes": 48,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_test/bootstrap.py",
+    "sha256": "bae82fb36edafb05933f6594da5cce32ea10e65020bb0b56fe16790f0b817d94",
+    "size_bytes": 5557,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_test/inference.py",
+    "sha256": "8a92d9426780217726849518ec992be77d98a83f0fe48d46d6c2d2e2ee1ea373",
+    "size_bytes": 6591,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_test/preflight.py",
+    "sha256": "e8c62855ff72e2e681e69625cbec58ccfa554397fae7387ba2424f00ed9f3c3d",
+    "size_bytes": 3979,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_test/reporting.py",
+    "sha256": "860a9d9fc1fa7888f3432334df6119bddbf1565cc84e5610743e0e38dacb64e2",
+    "size_bytes": 5742,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/final_test/safety.py",
+    "sha256": "50b3085a20cc05fb06d75d6f37e0cebd27098b61ef0194651671707dbc6a1be5",
+    "size_bytes": 5352,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/models/__init__.py",
+    "sha256": "00d21e04339f118654c14ce674ac3b1eb144ff3017b06bf992952efd7973d23a",
+    "size_bytes": 268,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/models/cnn_baseline.py",
+    "sha256": "98fa3c406113134a8f1e4daed2a9768cc41613ebeed58aab27bcea426be7b604",
+    "size_bytes": 1708,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/models/transfer_models.py",
+    "sha256": "ed95fdbe820065d990223444fa510205b81c28a69881f1c79e0c5e2cf196d1f6",
+    "size_bytes": 3936,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/posthoc_error_analysis.py",
+    "sha256": "1e4859270b82e7d9248dd63cc4f29ff499443d465ed2f2eeb0e84c45b67a73fe",
+    "size_bytes": 23368,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "post-hoc",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/run_final_test_preflight.py",
+    "sha256": "5ed29fa83038a2c2e4970ca678c92a0590d0ab753fb012e7eace559655fe8bb1",
+    "size_bytes": 1791,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/smoke_test.py",
+    "sha256": "587132b4d30b6835e34b75fc810fa55c036a988c44b713034fe4d60c739b892f",
+    "size_bytes": 1175,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/train_cnn.py",
+    "sha256": "c5788c915a18bd1bfb6635ce900d4e35f5cf355315b62d66e9211359fdb0e903",
+    "size_bytes": 8982,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/train_transfer.py",
+    "sha256": "c9495d2ab0cf426ee8044bd5dcf1d1d847a83d6243e5c485a582686c0a9cd608",
+    "size_bytes": 12028,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/training/__init__.py",
+    "sha256": "68b8769918805391ca7184e2af874b3db78503be10b4b40fa5e9ec1f3247acbc",
+    "size_bytes": 67,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/training/callbacks.py",
+    "sha256": "8885c0133bc3d915f26ee1dfc1c0205b93f0e8c751b891b05a6accdf0540586a",
+    "size_bytes": 1315,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/training/metrics.py",
+    "sha256": "a319a74745ebb72ec9fae2d3059374353b3f9e0d1576d74e5a307579819203f8",
+    "size_bytes": 2476,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/training/reproducibility.py",
+    "sha256": "f37711605536a4e97a3f9db73bfa5d5e49737133e7cec71abc59b17c9f78b61b",
+    "size_bytes": 1531,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "src/training/two_stage_training.py",
+    "sha256": "8a20dc77dfa6831f774d841df1e5efb51c1198abb6312dab581d1f494bb9d036",
+    "size_bytes": 7003,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_data_pipeline.py",
+    "sha256": "11c07855a7de328e3a2b9664d90afe45ada2da3782a825077ad1a8398c4b18af",
+    "size_bytes": 3525,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_final_protocol.py",
+    "sha256": "e76acd701c2686843415cd6b9346acc7c2dc7320d9e87e718d6154cb76934224",
+    "size_bytes": 8175,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_final_test_evaluation.py",
+    "sha256": "948021a39eb8b1f878f6edc3fba908c9761892c19fe1c1bb7f26d854d1109fde",
+    "size_bytes": 8729,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "test",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_imbalance_strategies.py",
+    "sha256": "e4fc45b4a2c7972a5c1838969a9363430197c0826762f1a7536d816d339fdfe3",
+    "size_bytes": 7350,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_multiseed_aggregation.py",
+    "sha256": "f5d9fc5a417b4a32e448f893c71938625b5d9bae41f3242935da4f5b09df0a09",
+    "size_bytes": 6494,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_posthoc_analysis.py",
+    "sha256": "451e40c27198e55e7df60ff4c3284b9a53a5a36f8919f7873857a6eec2c7aeb3",
+    "size_bytes": 3920,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "post-hoc",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_training_components.py",
+    "sha256": "e5a3c4858bdb9815561b656053489ea567664c2ba2e3f638ee5a6fefd77c618b",
+    "size_bytes": 3933,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_transfer_models.py",
+    "sha256": "110faca74768f225ed9655f55a1a7cc851b565d7d5f639492cd4e74efdd1387d",
+    "size_bytes": 3986,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_transfer_multiseed_aggregation.py",
+    "sha256": "73da093dad7ab7d0b3d46b22687965b900a0860c10650bd20ceeb0bc56dfd77c",
+    "size_bytes": 7959,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "validation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
+    "relative_path": "tests/test_two_stage_training.py",
+    "sha256": "ef3fe48bfab0a222f5724d40eea8db80bafedb4a9d585d458305bfb23db4aaee",
+    "size_bytes": 2291,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  }
+]

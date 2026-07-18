@@ -1,0 +1,11 @@
+experiment_name: efficientnetb0_transfer_v1
+model_name: efficientnetb0
+data_config: configs/data_v3_clean.yaml
+seed: 42
+image_size: [224, 224]
+batch_size: 16
+loss: binary_crossentropy
+class_weight: null
+threshold: 0.5
+weights: imagenet
+mixed_precision: false

@@ -1,0 +1,23 @@
+dataset_root: data/raw/chest_xray
+train_manifest: data/splits/v3_clean/train.csv
+val_manifest: data/splits/v3_clean/val.csv
+test_manifest: data/splits/v3_clean/test.csv
+excluded_manifest: data/splits/v3_clean/excluded_from_development.csv
+image_size: [224, 224]
+positive_class: PNEUMONIA
+random_seed: 42
+split_protocol: patient_isolated_official_test
+batch_size: 32
+num_channels: 3
+augmentation:
+  enabled: true
+  rotation_factor: 0.03
+  translation_height: 0.05
+  translation_width: 0.05
+  zoom_height: 0.10
+  zoom_width: 0.10
+  contrast_factor: 0.10
+cache: false
+prefetch: true
+deterministic_validation: true
+deterministic_test: true

@@ -1,0 +1,7 @@
+experiment_name: cnn_baseline_v1
+data_config: configs/data_v3_clean.yaml
+seed: 42
+image_size: [224, 224]
+batch_size: 32
+threshold: 0.5
+mixed_precision: false

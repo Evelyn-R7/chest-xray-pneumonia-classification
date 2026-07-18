@@ -1,0 +1,17 @@
+experiment_name: cnn_baseline_v1
+data_config: configs/data_v3_clean.yaml
+seed: 42
+image_size: [224, 224]
+batch_size: 32
+max_epochs: 30
+learning_rate: 0.001
+dropout_rate: 0.4
+loss: binary_crossentropy
+class_weight: null
+mixed_precision: false
+monitor: val_loss
+early_stopping_patience: 5
+reduce_lr_patience: 2
+reduce_lr_factor: 0.5
+minimum_learning_rate: 0.000001
+threshold: 0.5

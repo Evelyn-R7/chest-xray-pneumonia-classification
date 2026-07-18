@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using this metadata."
+title: "chest-xray-pneumonia-classification"
+authors:
+  - family-names: "Zhao"
+    given-names: "Xiaorui"
+version: "0.1.0"
+repository-code: "https://github.com/Evelyn-R7/chest-xray-pneumonia-classification"
+url: "https://github.com/Evelyn-R7/chest-xray-pneumonia-classification"
+license: "MIT"
