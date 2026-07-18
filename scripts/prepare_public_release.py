@@ -14,12 +14,77 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from PIL import Image, ImageDraw
+from sklearn.calibration import calibration_curve
+from sklearn.metrics import auc, precision_recall_curve, roc_curve
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 ASSETS = DOCS / "assets"
 REPORTS = ROOT / "reports"
+FINAL_TEST_DIR = ROOT / "results/final_test/evaluation_20260718T090726Z"
+PRIMARY_THRESHOLD = 0.5618644666666667
+
+PALETTE = {
+    "navy": "#1F3A5F",
+    "blue": "#3E6EA8",
+    "cyan": "#5BA6A9",
+    "amber": "#D99A2B",
+    "red": "#B14A4A",
+    "green": "#4F8F6F",
+    "ink": "#20242A",
+    "muted": "#6B7280",
+    "grid": "#D8DEE8",
+    "paper": "#FFFFFF",
+    "panel": "#F6F8FB",
+}
+
+
+def apply_publication_style() -> None:
+    """Use a consistent academic plotting style for public figures."""
+    plt.rcParams.update({
+        "figure.facecolor": PALETTE["paper"],
+        "axes.facecolor": PALETTE["paper"],
+        "axes.edgecolor": PALETTE["ink"],
+        "axes.linewidth": 1.15,
+        "axes.labelcolor": PALETTE["ink"],
+        "axes.titlecolor": PALETTE["ink"],
+        "axes.titlesize": 15,
+        "axes.labelsize": 12,
+        "font.family": "DejaVu Sans",
+        "font.size": 11,
+        "legend.frameon": False,
+        "legend.fontsize": 10,
+        "xtick.color": PALETTE["ink"],
+        "ytick.color": PALETTE["ink"],
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "savefig.bbox": "tight",
+        "savefig.facecolor": PALETTE["paper"],
+    })
+
+
+def finish_figure(fig: plt.Figure, path: Path, *, dpi: int = 260) -> None:
+    fig.tight_layout(pad=1.2)
+    fig.savefig(path, dpi=dpi)
+    plt.close(fig)
+
+
+def soften_axes(ax: plt.Axes, *, ygrid: bool = True, xgrid: bool = False) -> None:
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_linewidth(1.1)
+    ax.spines["bottom"].set_linewidth(1.1)
+    if ygrid:
+        ax.grid(axis="y", color=PALETTE["grid"], linewidth=0.8, alpha=0.85)
+    if xgrid:
+        ax.grid(axis="x", color=PALETTE["grid"], linewidth=0.8, alpha=0.85)
+    ax.set_axisbelow(True)
+
+
+def add_subtitle(fig: plt.Figure, text: str) -> None:
+    fig.text(0.01, 0.01, text, fontsize=9, color=PALETTE["muted"])
 
 
 def sha256_file(path: Path) -> str:
@@ -41,45 +106,59 @@ def copy_asset(source: str, target: str) -> None:
 
 
 def make_pipeline_overview() -> None:
-    fig, ax = plt.subplots(figsize=(12, 3.2))
+    fig, ax = plt.subplots(figsize=(14, 3.2))
     ax.axis("off")
     steps = [
-        "Kaggle chest X-ray dataset",
-        "Audit + patient-id inference",
-        "v3_clean patient-level split",
-        "CNN + transfer learning",
-        "Multi-seed validation",
-        "Frozen protocol",
-        "One-time test",
-        "Post-hoc Grad-CAM",
+        ("Data audit", "Filename checks\npatient-id inference"),
+        ("v3_clean split", "Patient-level\ntrain / val / test"),
+        ("Model families", "CNN baseline\ntransfer learning"),
+        ("Multi-seed validation", "Robustness across\n42 / 2025 / 2026"),
+        ("Frozen protocol", "Ensemble + calibration\n+ primary threshold"),
+        ("One-time test", "Locked final\nevaluation"),
+        ("Post-hoc analysis", "Errors + Grad-CAM\nexploratory only"),
     ]
-    x = np.linspace(0.06, 0.94, len(steps))
-    for i, (xi, label) in enumerate(zip(x, steps)):
-        ax.text(xi, 0.55, label, ha="center", va="center", fontsize=8,
-                bbox=dict(boxstyle="round,pad=0.35", fc="#eef5ff", ec="#4c78a8"))
+    x = np.linspace(0.07, 0.93, len(steps))
+    for i, (xi, (title, body)) in enumerate(zip(x, steps)):
+        color = PALETTE["navy"] if i in {4, 5} else PALETTE["blue"]
+        ax.text(
+            xi, 0.60, f"{title}\n{body}", ha="center", va="center", fontsize=9.3,
+            linespacing=1.25, color=PALETTE["ink"],
+            bbox=dict(boxstyle="round,pad=0.55,rounding_size=0.12", fc=PALETTE["panel"], ec=color, lw=1.35),
+        )
         if i < len(steps) - 1:
-            ax.annotate("", xy=(x[i + 1] - 0.055, 0.55), xytext=(xi + 0.055, 0.55),
-                        arrowprops=dict(arrowstyle="->", lw=1.2, color="#555"))
-    ax.set_title("Leakage-aware chest X-ray pneumonia classification workflow", fontsize=12)
-    fig.tight_layout()
-    fig.savefig(ASSETS / "pipeline_overview.png", dpi=180)
-    plt.close(fig)
+            ax.annotate(
+                "", xy=(x[i + 1] - 0.06, 0.60), xytext=(xi + 0.06, 0.60),
+                arrowprops=dict(arrowstyle="-|>", lw=1.25, color=PALETTE["muted"], shrinkA=0, shrinkB=0),
+            )
+    ax.text(0.07, 0.91, "Leakage-aware chest X-ray pneumonia classification workflow",
+            ha="left", va="center", fontsize=16, fontweight="bold", color=PALETTE["ink"])
+    ax.text(0.07, 0.18, "Final-test choices are frozen before test evaluation; Grad-CAM is post-hoc exploratory.",
+            ha="left", va="center", fontsize=10, color=PALETTE["muted"])
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0.08, 0.98)
+    finish_figure(fig, ASSETS / "pipeline_overview.png", dpi=260)
 
 
 def make_class_distribution() -> None:
-    labels = ["train NORMAL", "train PNEUMONIA", "val NORMAL", "val PNEUMONIA", "test NORMAL", "test PNEUMONIA"]
-    values = [1079, 2742, 270, 684, 234, 390]
-    colors = ["#72b7b2", "#e45756", "#72b7b2", "#e45756", "#72b7b2", "#e45756"]
-    fig, ax = plt.subplots(figsize=(10, 4.5))
-    ax.bar(labels, values, color=colors)
+    splits = ["Train", "Validation", "Test"]
+    normal = np.array([1079, 270, 234])
+    pneumonia = np.array([2742, 684, 390])
+    x = np.arange(len(splits))
+    width = 0.34
+    fig, ax = plt.subplots(figsize=(10.5, 5.2))
+    bars_n = ax.bar(x - width / 2, normal, width, color=PALETTE["cyan"], edgecolor=PALETTE["ink"], linewidth=0.8, label="Normal")
+    bars_p = ax.bar(x + width / 2, pneumonia, width, color=PALETTE["red"], edgecolor=PALETTE["ink"], linewidth=0.8, label="Pneumonia")
     ax.set_ylabel("Image count")
     ax.set_title("v3_clean image-level class distribution")
-    ax.tick_params(axis="x", rotation=25)
-    for i, value in enumerate(values):
-        ax.text(i, value + 30, str(value), ha="center", fontsize=8)
-    fig.tight_layout()
-    fig.savefig(ASSETS / "class_distribution.png", dpi=180)
-    plt.close(fig)
+    ax.set_xticks(x, splits)
+    ax.legend(loc="upper right")
+    soften_axes(ax)
+    for bars in [bars_n, bars_p]:
+        for bar in bars:
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 35,
+                    f"{int(bar.get_height()):,}", ha="center", va="bottom", fontsize=9)
+    add_subtitle(fig, "Counts are image-level; patient-level grouping is used for leakage-aware splitting.")
+    finish_figure(fig, ASSETS / "class_distribution.png")
 
 
 def make_transfer_comparison() -> None:
@@ -87,16 +166,150 @@ def make_transfer_comparison() -> None:
     acc = [0.961216, 0.970650, 0.972397]
     bal = [(0.950292 + 0.988889) / 2, (0.975146 + 0.959259) / 2, 0.969168]
     x = np.arange(len(labels))
-    fig, ax = plt.subplots(figsize=(8, 4.5))
-    ax.bar(x - 0.18, acc, 0.36, label="accuracy")
-    ax.bar(x + 0.18, bal, 0.36, label="balanced accuracy")
+    fig, ax = plt.subplots(figsize=(10.5, 5.2))
+    ax.bar(x - 0.18, acc, 0.36, label="Accuracy", color=PALETTE["blue"], edgecolor=PALETTE["ink"], linewidth=0.8)
+    ax.bar(x + 0.18, bal, 0.36, label="Balanced accuracy", color=PALETTE["amber"], edgecolor=PALETTE["ink"], linewidth=0.8)
     ax.set_ylim(0.93, 1.0)
     ax.set_xticks(x, labels, rotation=20, ha="right")
     ax.set_title("Validation transfer-learning comparison")
-    ax.legend()
-    fig.tight_layout()
-    fig.savefig(ASSETS / "transfer_model_comparison.png", dpi=180)
-    plt.close(fig)
+    ax.set_ylabel("Validation metric")
+    ax.legend(loc="upper left")
+    soften_axes(ax)
+    add_subtitle(fig, "Validation-only comparison; final protocol selected the EfficientNetB0 control ensemble before test evaluation.")
+    finish_figure(fig, ASSETS / "transfer_model_comparison.png")
+
+
+def make_cnn_multiseed_metrics() -> None:
+    metrics = pd.read_csv(ROOT / "results/experiments/cnn_baseline_v1/multiseed_summary/metrics_by_seed.csv")
+    metric_cols = ["accuracy", "balanced_accuracy", "sensitivity", "specificity", "roc_auc", "pr_auc"]
+    labels = ["Accuracy", "Balanced acc.", "Sensitivity", "Specificity", "ROC-AUC", "PR-AUC"]
+    x = np.arange(len(metric_cols))
+    fig, ax = plt.subplots(figsize=(12.5, 6.2))
+    for _, row in metrics.iterrows():
+        ax.plot(x, row[metric_cols].to_numpy(), marker="o", linewidth=1.35, alpha=0.55, label=f"Seed {int(row['seed'])}")
+    mean = metrics[metric_cols].mean(axis=0).to_numpy()
+    ax.plot(x, mean, marker="D", markersize=6, linewidth=2.4, color=PALETTE["ink"], label="Mean")
+    ax.set_xticks(x, labels, rotation=15, ha="right")
+    ax.set_ylim(0.50, 1.02)
+    ax.set_ylabel("Validation metric")
+    ax.set_title("CNN baseline: multi-seed validation profile")
+    ax.legend(ncol=4, loc="lower center", bbox_to_anchor=(0.5, 1.01))
+    soften_axes(ax)
+    add_subtitle(fig, "Thin lines show individual seeds; the dark line shows the three-seed mean.")
+    finish_figure(fig, ASSETS / "cnn_multiseed_metrics.png")
+
+
+def make_imbalance_strategy_comparison() -> None:
+    summary = pd.read_csv(ROOT / "results/experiments/efficientnetb0_imbalance_comparison/strategy_metrics_summary.csv")
+    strategy_labels = {"control": "Control", "class_weight": "Class weight", "focal": "Focal loss"}
+    summary["label"] = summary["strategy"].map(strategy_labels)
+    metrics = [
+        ("balanced_accuracy", "Balanced accuracy", PALETTE["blue"]),
+        ("sensitivity", "Sensitivity", PALETTE["green"]),
+        ("specificity", "Specificity", PALETTE["amber"]),
+        ("brier_score", "Brier score", PALETTE["red"]),
+    ]
+    fig, axes = plt.subplots(1, 4, figsize=(15, 4.8))
+    for ax, (prefix, title, color) in zip(axes, metrics):
+        means = summary[f"{prefix}_mean"].to_numpy()
+        std = summary[f"{prefix}_sample_std"].to_numpy()
+        y = np.arange(len(summary))
+        ax.barh(y, means, xerr=std, color=color, alpha=0.88, edgecolor=PALETTE["ink"], linewidth=0.8,
+                error_kw=dict(ecolor=PALETTE["ink"], lw=1.1, capsize=3))
+        ax.set_yticks(y, summary["label"] if ax is axes[0] else [])
+        ax.set_title(title)
+        ax.set_xlim(0, max(1.0, float(np.nanmax(means + std)) * 1.05) if prefix != "brier_score" else 0.045)
+        soften_axes(ax, ygrid=False, xgrid=True)
+        if prefix == "brier_score":
+            ax.set_xlabel("Lower is better")
+        else:
+            ax.set_xlabel("Higher is better")
+    fig.suptitle("EfficientNetB0 imbalance strategies: validation-only selection evidence", y=1.03, fontsize=15, fontweight="bold")
+    add_subtitle(fig, "Bars show three-seed means; whiskers show sample standard deviation.")
+    finish_figure(fig, ASSETS / "imbalance_strategy_comparison.png")
+
+
+def make_final_test_curves() -> None:
+    predictions = pd.read_csv(FINAL_TEST_DIR / "final_test_predictions.csv")
+    y_true = predictions["true_label"].to_numpy()
+    probabilities = predictions["final_probability"].to_numpy()
+    predicted = (probabilities >= PRIMARY_THRESHOLD).astype(int)
+    tn = int(((y_true == 0) & (predicted == 0)).sum())
+    fp = int(((y_true == 0) & (predicted == 1)).sum())
+    fn = int(((y_true == 1) & (predicted == 0)).sum())
+    tp = int(((y_true == 1) & (predicted == 1)).sum())
+    if (tn, fp, fn, tp) != (152, 82, 1, 389):
+        raise RuntimeError(f"Unexpected final-test confusion counts: {(tn, fp, fn, tp)}")
+
+    matrix = np.array([[tn, fp], [fn, tp]])
+    fig, ax = plt.subplots(figsize=(7.4, 6.4))
+    image = ax.imshow(matrix, cmap="Blues", vmin=0, vmax=matrix.max())
+    ax.set_xticks([0, 1], ["Predicted normal", "Predicted pneumonia"])
+    ax.set_yticks([0, 1], ["True normal", "True pneumonia"])
+    ax.set_title("Final test confusion matrix at frozen threshold")
+    for i in range(2):
+        for j in range(2):
+            value = matrix[i, j]
+            color = "white" if value > matrix.max() * 0.55 else PALETTE["ink"]
+            ax.text(j, i, f"{value:,}", ha="center", va="center", fontsize=18, fontweight="bold", color=color)
+    ax.text(0.5, -0.16, f"Primary threshold = {PRIMARY_THRESHOLD:.4f}; no threshold re-selection",
+            transform=ax.transAxes, ha="center", va="top", fontsize=9, color=PALETTE["muted"])
+    fig.colorbar(image, ax=ax, fraction=0.046, pad=0.04, label="Images")
+    finish_figure(fig, ASSETS / "final_test_confusion_matrix.png")
+
+    fpr, tpr, _ = roc_curve(y_true, probabilities)
+    roc_auc = auc(fpr, tpr)
+    fig, ax = plt.subplots(figsize=(7.2, 6.2))
+    ax.plot(fpr, tpr, color=PALETTE["blue"], lw=2.6, label=f"Ensemble ROC-AUC = {roc_auc:.3f}")
+    ax.plot([0, 1], [0, 1], color=PALETTE["muted"], lw=1.1, ls="--", label="Chance")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1.01)
+    ax.set_xlabel("False positive rate")
+    ax.set_ylabel("True positive rate")
+    ax.set_title("Final test ROC curve")
+    ax.legend(loc="lower right")
+    soften_axes(ax)
+    add_subtitle(fig, "Frozen EfficientNetB0 control ensemble; probabilities were not recalibrated after test evaluation.")
+    finish_figure(fig, ASSETS / "final_test_roc_curve.png")
+
+    precision, recall, _ = precision_recall_curve(y_true, probabilities)
+    pr_auc = auc(recall, precision)
+    prevalence = float(np.mean(y_true))
+    fig, ax = plt.subplots(figsize=(7.2, 6.2))
+    ax.plot(recall, precision, color=PALETTE["green"], lw=2.6, label=f"PR-AUC = {pr_auc:.3f}")
+    ax.axhline(prevalence, color=PALETTE["muted"], lw=1.1, ls="--", label=f"Prevalence = {prevalence:.3f}")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1.01)
+    ax.set_xlabel("Recall / sensitivity")
+    ax.set_ylabel("Precision / PPV")
+    ax.set_title("Final test precision-recall curve")
+    ax.legend(loc="lower left")
+    soften_axes(ax)
+    add_subtitle(fig, "Curve is descriptive for the frozen final-test predictions; it is not used for model selection.")
+    finish_figure(fig, ASSETS / "final_test_pr_curve.png")
+
+    frac_pos, mean_pred = calibration_curve(y_true, probabilities, n_bins=15, strategy="uniform")
+    bins = np.linspace(0, 1, 16)
+    bin_ids = np.digitize(probabilities, bins[1:-1], right=False)
+    counts = np.bincount(bin_ids, minlength=15)
+    nonzero_counts = counts[counts > 0]
+    sizes = np.clip(nonzero_counts * 4.0, 30, 500)
+    ece_payload = json.loads((FINAL_TEST_DIR / "test_metrics_with_ci.json").read_text(encoding="utf-8"))
+    ece = ece_payload["point_estimates"]["balanced_threshold"]["ece"]
+    fig, ax = plt.subplots(figsize=(7.2, 6.2))
+    ax.plot([0, 1], [0, 1], color=PALETTE["muted"], lw=1.1, ls="--", label="Perfect calibration")
+    ax.scatter(mean_pred, frac_pos, s=sizes, color=PALETTE["amber"], edgecolor=PALETTE["ink"], linewidth=0.8, alpha=0.88,
+               label="15 uniform bins")
+    ax.plot(mean_pred, frac_pos, color=PALETTE["amber"], lw=1.4, alpha=0.75)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.set_xlabel("Mean predicted probability")
+    ax.set_ylabel("Observed pneumonia fraction")
+    ax.set_title(f"Final test calibration curve (ECE={ece:.3f})")
+    ax.legend(loc="upper left")
+    soften_axes(ax)
+    add_subtitle(fig, "Marker size reflects bin count; calibration worsened on the final test set.")
+    finish_figure(fig, ASSETS / "final_test_calibration_curve.png")
 
 
 def make_selected_gradcam_examples() -> None:
@@ -110,31 +323,35 @@ def make_selected_gradcam_examples() -> None:
         ("TP", "24_TP_person103_bacteria_488_overlay.png"),
         ("TP", "34_TP_person91_bacteria_446_overlay.png"),
     ]
+    tile = 320
+    header = 40
     images = []
     for label, name in entries:
-        path = ROOT / "results/posthoc_analysis/gradcam" / name
-        image = Image.open(path).convert("RGB").resize((320, 320))
-        draw = ImageDraw.Draw(image)
-        draw.rectangle((0, 0, 320, 26), fill=(255, 255, 255))
-        draw.text((8, 6), f"{label} | seed42 Grad-CAM", fill=(0, 0, 0))
-        images.append(image)
-    canvas = Image.new("RGB", (3 * 320, 2 * 320), "white")
+        image = Image.open(ROOT / "results/posthoc_analysis/gradcam" / name).convert("RGB").resize((tile, tile))
+        panel = Image.new("RGB", (tile, tile + header), "white")
+        panel.paste(image, (0, header))
+        draw = ImageDraw.Draw(panel)
+        color = {"TN": "#4F8F6F", "TP": "#1F3A5F", "FP": "#B14A4A", "FN": "#D99A2B"}[label]
+        draw.rectangle((0, 0, tile, header), fill=color)
+        draw.text((10, 12), f"{label}  |  seed 42 Grad-CAM", fill="white")
+        images.append(panel)
+    canvas = Image.new("RGB", (3 * tile, 2 * (tile + header) + 42), "white")
+    draw = ImageDraw.Draw(canvas)
+    draw.text((12, 12), "Deterministic post-hoc Grad-CAM selection (single seed-42 model)", fill=(32, 36, 42))
     for i, image in enumerate(images):
-        canvas.paste(image, ((i % 3) * 320, (i // 3) * 320))
+        canvas.paste(image, ((i % 3) * tile, 42 + (i // 3) * (tile + header)))
     canvas.save(ASSETS / "selected_gradcam_examples.png")
 
 
 def generate_assets() -> None:
+    apply_publication_style()
     ASSETS.mkdir(parents=True, exist_ok=True)
     make_pipeline_overview()
     make_class_distribution()
-    copy_asset("results/experiments/cnn_baseline_v1/multiseed_summary/multiseed_metrics.png", "cnn_multiseed_metrics.png")
+    make_cnn_multiseed_metrics()
     make_transfer_comparison()
-    copy_asset("results/experiments/efficientnetb0_imbalance_comparison/strategy_comparison.png", "imbalance_strategy_comparison.png")
-    copy_asset("results/final_test/evaluation_20260718T090726Z/confusion_matrix_balanced_threshold.png", "final_test_confusion_matrix.png")
-    copy_asset("results/final_test/evaluation_20260718T090726Z/roc_curve_test.png", "final_test_roc_curve.png")
-    copy_asset("results/final_test/evaluation_20260718T090726Z/pr_curve_test.png", "final_test_pr_curve.png")
-    copy_asset("results/final_test/evaluation_20260718T090726Z/calibration_curve_test.png", "final_test_calibration_curve.png")
+    make_imbalance_strategy_comparison()
+    make_final_test_curves()
     make_selected_gradcam_examples()
 
 

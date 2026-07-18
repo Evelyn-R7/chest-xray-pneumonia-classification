@@ -190,8 +190,8 @@
   },
   {
     "relative_path": "docs/assets/class_distribution.png",
-    "sha256": "58fb482b0407f5562430deb8c73025989e8ddf0dec98a885739ba9ef8fa7e186",
-    "size_bytes": 68091,
+    "sha256": "ee5e23979cdfcab4b65d4fa1cce00cf2a0d6806e0ba9483faa79d62911678ca5",
+    "size_bytes": 99379,
     "source": "public release file generated or curated from existing reports/results",
     "category": "documentation",
     "contains_image": true,
@@ -199,8 +199,8 @@
   },
   {
     "relative_path": "docs/assets/cnn_multiseed_metrics.png",
-    "sha256": "32d816a321cbea60fca71fc57c83f5d446567d5d58372472d71b4bfd62ae1b0b",
-    "size_bytes": 80352,
+    "sha256": "848c400e44b1c98b34cb38bdcf8e3b668a073d19922067f47ff678857aed7249",
+    "size_bytes": 304566,
     "source": "public release file generated or curated from existing reports/results",
     "category": "validation",
     "contains_image": true,
@@ -208,8 +208,8 @@
   },
   {
     "relative_path": "docs/assets/final_test_calibration_curve.png",
-    "sha256": "80a4ff17e1165d877048183eb47eb0bc5f9abab047f607d8dde4749ee8512ec6",
-    "size_bytes": 61661,
+    "sha256": "4ccb6ad84bd1d54859ddf62dfe57cdb0afd4e228f2f08b579cdbd748fc4ae941",
+    "size_bytes": 187725,
     "source": "public release file generated or curated from existing reports/results",
     "category": "test",
     "contains_image": true,
@@ -217,8 +217,8 @@
   },
   {
     "relative_path": "docs/assets/final_test_confusion_matrix.png",
-    "sha256": "84939639e5a44de6f60004d7c21a6a9fa658bdd13c53cf4553e87a44c487542e",
-    "size_bytes": 34671,
+    "sha256": "395e6729fa7edcb7a9b6227e3e604fdc9163bf068865fc0a458ee588ddceab9a",
+    "size_bytes": 107384,
     "source": "public release file generated or curated from existing reports/results",
     "category": "test",
     "contains_image": true,
@@ -226,8 +226,8 @@
   },
   {
     "relative_path": "docs/assets/final_test_pr_curve.png",
-    "sha256": "87ad21516828c969ebfcda315834bf15d27f2a17c4c4e4bb9c1d3b0622d2b001",
-    "size_bytes": 45009,
+    "sha256": "df458f8867177146e1460758683ab34f9673a8070e82cf9c1974eb63eec9ab3f",
+    "size_bytes": 107454,
     "source": "public release file generated or curated from existing reports/results",
     "category": "test",
     "contains_image": true,
@@ -235,8 +235,8 @@
   },
   {
     "relative_path": "docs/assets/final_test_roc_curve.png",
-    "sha256": "7fa1eaac0ad3f2e8d8943fff5fc55a199fa281ad58e1634ee446d15c71df6c5a",
-    "size_bytes": 46126,
+    "sha256": "088ab1caa1548baef0614117e6a7005fe121fa417978aaf792758decb04f5f7b",
+    "size_bytes": 137631,
     "source": "public release file generated or curated from existing reports/results",
     "category": "test",
     "contains_image": true,
@@ -244,8 +244,8 @@
   },
   {
     "relative_path": "docs/assets/imbalance_strategy_comparison.png",
-    "sha256": "8793baa6c5b857a364e59f97fc94494dcb6057d6e4c74f838db3e7af273c9fe3",
-    "size_bytes": 54078,
+    "sha256": "5a6d42a7cc04c1562a57b7ac0c033eab0b6030c79ea2bbd0605b258987b41fbf",
+    "size_bytes": 154588,
     "source": "public release file generated or curated from existing reports/results",
     "category": "validation",
     "contains_image": true,
@@ -253,8 +253,8 @@
   },
   {
     "relative_path": "docs/assets/pipeline_overview.png",
-    "sha256": "9ce558139094b72dec78e3355f019211f1917f99cdfa435a701166e54b62adb7",
-    "size_bytes": 53698,
+    "sha256": "09fb3b18b04443f890b604ad19e043bfe3917eab167636f3799c1b09a0a03cd8",
+    "size_bytes": 164757,
     "source": "public release file generated or curated from existing reports/results",
     "category": "documentation",
     "contains_image": true,
@@ -262,8 +262,8 @@
   },
   {
     "relative_path": "docs/assets/selected_gradcam_examples.png",
-    "sha256": "d01694c281497ef07ef374edf8628ee8f912ed4b94393d82a1369f863b253d07",
-    "size_bytes": 518254,
+    "sha256": "96e38f98dc8aae51cae05794888de2b972470db6b8307142675c69c7bd58b990",
+    "size_bytes": 565066,
     "source": "public release file generated or curated from existing reports/results",
     "category": "post-hoc",
     "contains_image": true,
@@ -271,8 +271,8 @@
   },
   {
     "relative_path": "docs/assets/transfer_model_comparison.png",
-    "sha256": "d573d4479cdd0f369ce710a08539097518dff2211c03c5d683d43611948902ec",
-    "size_bytes": 60725,
+    "sha256": "7fe0199ccc8325bdb972b448b63d97f3565f802e9ca785ee8b0d7092e0286f97",
+    "size_bytes": 138174,
     "source": "public release file generated or curated from existing reports/results",
     "category": "validation",
     "contains_image": true,
@@ -378,6 +378,15 @@
     "suitable_for_public_release": true
   },
   {
+    "relative_path": "reports/github_release_report.md",
+    "sha256": "55d57434a860d10eb2af43f773f55901e3161b33254f111d5c568a9e25499fa7",
+    "size_bytes": 1907,
+    "source": "public release file generated or curated from existing reports/results",
+    "category": "documentation",
+    "contains_image": false,
+    "suitable_for_public_release": true
+  },
+  {
     "relative_path": "reports/posthoc_error_analysis.md",
     "sha256": "9c934320cec65d8ded7c3145a7604589d94c3ddbe0dd88ea9104a54b3d6e1d36",
     "size_bytes": 5478,
@@ -469,8 +478,8 @@
   },
   {
     "relative_path": "scripts/prepare_public_release.py",
-    "sha256": "9799be332223206280b4acc854934e4eb32b659eeb29442366abf164e20d641d",
-    "size_bytes": 25438,
+    "sha256": "827230e9132d1f79d0a828d0f95df4c66e81322097bf996fea4bf88be520ca07",
+    "size_bytes": 36074,
     "source": "public release file generated or curated from existing reports/results",
     "category": "documentation",
     "contains_image": false,
